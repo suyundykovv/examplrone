@@ -6,12 +6,17 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public double distance (point destination){
-        double dx = this.x - destination.x;
-        double dy = this.y - destination.y;
-
-        return math.sqrt(dx * dx + dy * dy);
+    public double distance(Point destination) {
+        double dX = destination.x - this.x;
+        double dY = destination.y - this.y;
+        return Math.sqrt(dX * dX + dY * dY);
 
     }
 
+    @Override
+    public String toString(){
+        return "("+ x +"," + y + ")";
+
+
+    }
 }
